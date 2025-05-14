@@ -91,29 +91,6 @@ nav a:hover::after {
     width: 100%;
 }
 
-@media (max-width: 768px) {
-    ul {
-        display: none; /* Standardmäßig verstecken */
-        flex-direction: column;
-        background: rgba(255, 255, 255, 0.9);
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        padding: 1rem 0;
-        border-radius: 0 0 10px 10px;
-    }
-
-    ul.active {
-        display: flex; /* Aktiviertes Menü */
-    }
-
-    ul li {
-        padding: 1rem 0;
-    }
-}
-
 .header {
     height: 100vh;
     background: linear-gradient(45deg, #6B66FF22, #4ECDC422);
@@ -163,7 +140,7 @@ nav a:hover::after {
 #bewerbungs-vid {
     display: block;
     max-width: 100%;
-    width: 90%;
+    width: 80%;
     height: auto;
     margin: 0 auto;
     margin-top: 30px;
@@ -189,7 +166,7 @@ section {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-bottom: 4rem;
 }
@@ -237,8 +214,63 @@ section {
     transform: scale(1.05);
 }
 
+#projects {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#projects .section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, #6B66FF, #4ECDC4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.project-card p {
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .goals {
     padding: 4rem 2rem;
+    background: linear-gradient(45deg, #6B66FF11, #4ECDC411);
+    margin: 2rem auto; 
+    border-radius: 20px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .goal-item {
